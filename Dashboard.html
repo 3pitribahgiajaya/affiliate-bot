@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html><head><base target="_top"><meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body{font-family:Arial,sans-serif;background:#f3f6fa;color:#18324b;margin:0;padding:18px}
+.wrap{max-width:900px;margin:auto}.hero{background:#123b63;color:white;padding:22px;border-radius:14px}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:12px;margin-top:16px}
+.card{background:white;padding:18px;border-radius:12px;box-shadow:0 2px 8px #0001}
+.num{font-size:25px;font-weight:bold;margin-top:8px}
+.note{font-size:13px;color:#536779;line-height:1.5}
+</style></head><body><div class="wrap">
+<div class="hero"><h2>BEN AI Shopee Affiliate</h2><div>Panel kontrol promosi, konten, dan komisi</div></div>
+<div class="cards" id="cards"><div class="card">Memuat dashboard…</div></div>
+<p class="note">Dashboard membaca data dari Google Sheets. Klik menu BEN AI → Perbarui Dashboard untuk memperbarui ringkasan.</p>
+</div><script>
+google.script.run.withSuccessHandler(d=>{
+ document.getElementById('cards').innerHTML=Object.entries(d).map(([k,v])=>`<div class="card">${k}<div class="num">${v}</div></div>`).join('');
+}).getDashboardData();
+</script></body></html>
