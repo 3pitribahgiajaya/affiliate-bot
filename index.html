@@ -53,4 +53,5 @@ document.getElementById('restore').onchange=async e=>{try{let x=JSON.parse(await
 document.getElementById('clearData').onclick=()=>{if(confirm('Hapus semua produk, konten, dan performa dari perangkat ini?')){db={products:[],contents:[],tracking:[]};persist()}};
 document.getElementById('today').textContent='Tanggal: '+new Date().toLocaleDateString('id-ID')+' • Penyimpanan lokal';
 render();
+if ('serviceWorker' in navigator && location.protocol.startsWith('http')) { window.addEventListener('load', () => navigator.serviceWorker.register('./sw.js').catch(err => console.warn('Service worker registration failed', err))); }
 </script></body></html>
