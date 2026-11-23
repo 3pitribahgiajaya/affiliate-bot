@@ -1,0 +1,11 @@
+{
+  "name": "BEN AI Shopee Affiliate",
+  "short_name": "BEN Affiliate",
+  "lang": "id-ID",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#f7f4f5",
+  "theme_color": "#d7193f",
+  "description": "Dashboard pengelolaan produk dan konten Shopee Affiliate"
+}
